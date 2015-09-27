@@ -13,7 +13,7 @@ In this document some words will have exactly this meaning throughout the docume
 HOST = CPU </br>
 DEVICE = GPU
 
-##Hello World
+<h3>Hello World</h3>
 Find this program in Root Folder as '1-HelloWorld'
 ```C
 #include "cuda_runtime.h"
@@ -32,7 +32,7 @@ int main()
 **__global__**  : Keyword which specifies that this function is going to run on the DEVICE </br>
 **kernel<<<1,1>>>()** : Calling the function that needed to be run on DEVICE. Arguments for nvcc(Nvidia Cuda Compiler) 1,1 are passed at this state. Meaning of these arguments are explained later. </br>
 
-##First Program on DEVICE
+<h3>First Program on DEVICE</h3>
 Find this program in Root Folder as '2-SlopeOfLine'</br>
 In this code calculating slope of a line is implemented. I hope you know what slope of line is. If not you should be doing grade 7 mathematics before this. Seriously...
 
@@ -61,10 +61,8 @@ int main()
 }
 ```
 
-###cudaMalloc :  
-Allocates memory on GPU </br>
-###cudaMemCpy :  
-Copies data between HOST and DEVICE... There are 4 arguments...</br>
+<h4>cudaMalloc</h4> :  Allocates memory on GPU </br>
+<h4>cudaMemCpy : </h4>Copies data between HOST and DEVICE... There are 4 arguments...</br>
 		1. Destination memory address : In our case slope variable</br>
 		2. Source pointer : Which is slopePtr</br>
 		3. size of the variable</br>
@@ -73,7 +71,7 @@ Copies data between HOST and DEVICE... There are 4 arguments...</br>
 			..*cudaMemcoyHostToDevice : Copy data from HOST to DEVICE</br>
 
 
-###Fact : 
+<h4>Fact : </h4>
 You can never modify GPU memory from HOST. If you want to modify you will always have to use data copying in between HOST and DEVICE.
 
 
