@@ -12,6 +12,7 @@ In this document some words will have exactly this meaning throughout the docume
 
 HOST = CPU </br>
 DEVICE = GPU
+Fact = Some tip about specific segment or rule
 
 ###Hello World
 Find this program in Root Folder as '1-HelloWorld'
@@ -31,7 +32,8 @@ int main()
 
 ####__global__ : 
 Keyword which specifies that this function is going to run on the DEVICE </br>
-####kernel<<<1,1>>>() : Calling the function that needed to be run on DEVICE. Arguments for nvcc(Nvidia Cuda Compiler) 1,1 are passed at this state. Meaning of these arguments are explained later. </br>
+####kernel<<<1,1>>>() : 
+Calling the function that needed to be run on DEVICE. Arguments for nvcc(Nvidia Cuda Compiler) 1,1 are passed at this state. Meaning of these arguments are explained later. </br>
 
 ###First Program on DEVICE
 Find this program in Root Folder as '2-SlopeOfLine'</br>
@@ -76,6 +78,7 @@ Copies data between HOST and DEVICE... There are 4 arguments...</br>
 
 ####Fact :
 You can never modify GPU memory from HOST. If you want to modify you will always have to use data copying in between HOST and DEVICE.
+
 
 
 
